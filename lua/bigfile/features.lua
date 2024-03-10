@@ -106,6 +106,14 @@ feature("vimopts", {
   end,
 })
 
+feature("treesitter_context", {
+  disable = function()
+    pcall(function()
+      require("treesitter-context").disable()
+    end)
+  end,
+})
+
 feature("syntax", {
   opts = { defer = true },
   disable = function()
